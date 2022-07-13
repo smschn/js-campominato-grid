@@ -27,6 +27,8 @@ function createSquare() {
         newSquare.addEventListener('click', 
         function(){
             this.style.backgroundColor = 'red';
+            console.log(this.textContent);
         })
+        // ritorno tutto quanto fatto su square
         return newSquare;
 }
