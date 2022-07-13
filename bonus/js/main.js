@@ -30,6 +30,15 @@ function() {
     }
 })
 
+// richiamare bottone reload
+const reloadDom = document.getElementById('reload_btn');
+
+// aggiungere evento al bottone reload
+reloadDom.addEventListener('click',
+function() {
+    window.location.reload();
+})
+
 // creare una funzione per generare <div square>
 function createSquare() {
         // creo nuovo elemento <div> ad ogni ciclo
@@ -49,7 +58,7 @@ function createSquare() {
         // creare un event listener su ogni singola cella che cambi sfondo allo square e scriva in console il numero della cella
         newSquare.addEventListener('click', 
         function(){
-            // se non ho ancora cliccato, imposto lo sfondo azzurrino; altrimenti, se ho già cliccato e quindi ho già lo sfondo azzurrino, reimposto lo sfondo verde
+            // se non ho ancora cliccato, imposto lo sfondo azzurrino; altrimenti, se ho già cliccato e quindi ho già lo sfondo azzurrino, reimposto lo sfondo verde (potrei usare .toggle)
             if (this.style.backgroundColor == 'lightblue') {
                 this.style.backgroundColor = '#7fffd4';
             } else {
