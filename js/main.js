@@ -1,8 +1,18 @@
+// richiamare il container
 const square_containerDom = document.getElementById('square_container');
 
-for (let i=1; i<101; i++) {
-    const newSquare = createSquare();
-}
+// richiamare il button
+const buttonDom = document.getElementById('play_btn');
+
+// aggiungere evento di attivazione del ciclo
+buttonDom.addEventListener('click',
+function() {
+    for (let i=1; i<101; i++) {
+        // funzione per creare uno square ad ogni ciclo da 1 a 100
+        const newSquare = createSquare();
+    }
+})
+
 
 // funzione per creare <div square>
 function createSquare() {
