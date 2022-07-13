@@ -3,3 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+header button {
+    padding: 0 30px;
+}
+
+main {
+    width: 800px;
+    height: 800px;
+    margin: 100px auto 0;
+    background-color: black;
+}
+
+footer {
+    padding: 30px;
+}
