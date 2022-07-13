@@ -26,7 +26,12 @@ function createSquare() {
         // creare un event listener su ogni singola cella che cambi sfondo allo square e scriva in console il numero della cella
         newSquare.addEventListener('click', 
         function(){
-            this.style.backgroundColor = 'red';
+            // se non ho ancora cliccato, imposto lo sfondo azzurrino; altrimenti, se ho già cliccato e quindi ho già lo sfondo azzurrino, reimposto lo sfondo verde
+            if (this.style.backgroundColor == 'lightblue') {
+                this.style.backgroundColor = '#7fffd4';
+            } else {
+                this.style.backgroundColor = 'lightblue';
+            }
             console.log(this.textContent);
         })
         // ritorno tutto quanto fatto su square
