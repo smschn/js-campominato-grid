@@ -4,6 +4,26 @@ const square_containerDom = document.getElementById('square_container');
 // richiamare il button
 const buttonDom = document.getElementById('play_btn');
 
+// richiamare la difficoltà
+const difficultyDom = document.getElementById('difficulty');
+
+// struttura condizionale
+buttonDom.addEventListener('click',
+function() {
+    if (difficultyDom.value == 'easy') {
+        console.log('facile');
+    } else if (difficultyDom.value == 'medium') {
+        console.log('media');
+    } else if (difficultyDom.value == 'hard') {
+        console.log('difficile');
+
+    }
+})
+
+
+
+
+/*
 // aggiungere evento di attivazione del ciclo
 buttonDom.addEventListener('click',
 function() {
@@ -13,6 +33,8 @@ function() {
         // stampo il numero su ogni quadrato
         newSquare.append(i);
     }
+    for ()easy
+    for ()hard
 })
 
 // funzione per creare <div square>
@@ -34,6 +56,9 @@ function createSquare() {
             }
             console.log(`The number of the square is: ${this.textContent}`);
         })
-        // ritorno tutto quanto fatto su square
+        // ritorno tutto quanto fatto su newSquare
         return newSquare;
 }
+
+// funzione per generare un numero
+*/
