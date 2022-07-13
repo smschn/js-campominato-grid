@@ -11,40 +11,26 @@ const difficultyDom = document.getElementById('difficulty');
 let numMin = 1;
 let numMax;
 
-// struttura condizionale
+// aggiungere evento al click
 buttonDom.addEventListener('click',
 function() {
+    // creare struttura condizionale che crea un numero di quadrati legato al livello di difficoltà scelto
     if (difficultyDom.value == 'easy') {
         console.log('facile');
         let numMax = 100;
-        const progressiveNumbers = getProgressiveNumbers(numMin, numMax);
+        const newProgressiveSquare = getProgressiveNumbers(numMin, numMax);
     } else if (difficultyDom.value == 'medium') {
         console.log('media');
         let numMax = 81;
-        const progressiveNumbers = getProgressiveNumbers(numMin, numMax);
+        const newProgressiveSquare = getProgressiveNumbers(numMin, numMax);
     } else if (difficultyDom.value == 'hard') {
         console.log('difficile');
         let numMax = 49;
-        const progressiveNumbers = getProgressiveNumbers(numMin, numMax);
+        const newProgressiveSquare = getProgressiveNumbers(numMin, numMax);
     }
 })
 
-/*
-// aggiungere evento di attivazione del ciclo
-buttonDom.addEventListener('click',
-function() {
-    for (let i=1; i<101; i++) {
-        // funzione per creare uno square ad ogni ciclo da 1 a 100
-        const newSquare = createSquare();
-        // stampo il numero su ogni quadrato
-        newSquare.append(i);
-    }
-    for ()easy
-    for ()hard
-})
-*/
-
-// funzione per creare <div square>
+// creare una funzione per generare <div square>
 function createSquare() {
         // creo nuovo elemento <div> ad ogni ciclo
         const newSquare = document.createElement('div');
@@ -52,7 +38,7 @@ function createSquare() {
         newSquare.classList.add('square');
         // metto ('appendo') newSquare dentro square_containerDom
         square_containerDom.append(newSquare);
-        // creare strutture condizionale per capire quale classe aggiungere ai quadrati
+        // creare struttura condizionale per capire quale classe aggiungere ai quadrati
         if (difficultyDom.value == 'easy') {
             newSquare.classList.add('c_easy');
         } else if (difficultyDom.value == 'medium') {
@@ -69,18 +55,19 @@ function createSquare() {
             } else {
                 this.style.backgroundColor = 'lightblue';
             }
+            // scrivere in console il numero del quadrato cliccato
             console.log(`The number of the square is: ${this.textContent}`);
         })
         // ritorno tutto quanto fatto su newSquare
         return newSquare;
 }
 
-// funzione per generare un numero tra un minimo ed un massimo
+// creare una funzione per generare numeri progressivi da un minimo ad un massimo
 function getProgressiveNumbers(parameter1, parameter2) {
     for (let i = parameter1; i < parameter2+1; i++) {
-        // funzione per creare uno square ad ogni ciclo da 1 a 100
+        // richiamare una funzione per creare uno square ad ogni ciclo dal minimo al massimo
         const newSquare = createSquare();
-        // stampo il numero su ogni quadrato
+        // aggiungere il numero su ogni quadrato
         newSquare.append(i);
         console.log(i);
     }
