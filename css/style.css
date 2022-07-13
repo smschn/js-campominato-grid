@@ -11,6 +11,17 @@ header {
     padding: 30px;
 }
 
+header .h_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    height: 50px;
+    margin-right: 20px;
+}
+
 header button {
     padding: 0 30px;
 }
