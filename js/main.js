@@ -10,9 +10,10 @@ function() {
     for (let i=1; i<101; i++) {
         // funzione per creare uno square ad ogni ciclo da 1 a 100
         const newSquare = createSquare();
+        // stampo il numero su ogni quadrato
+        newSquare.append(i);
     }
 })
-
 
 // funzione per creare <div square>
 function createSquare() {
