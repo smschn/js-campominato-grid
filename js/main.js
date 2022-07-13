@@ -32,7 +32,7 @@ function createSquare() {
             } else {
                 this.style.backgroundColor = 'lightblue';
             }
-            console.log(this.textContent);
+            console.log(`The number of the square is: ${this.textContent}`);
         })
         // ritorno tutto quanto fatto su square
         return newSquare;
