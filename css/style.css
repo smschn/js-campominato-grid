@@ -14,22 +14,28 @@ header button {
     padding: 0 30px;
 }
 
-#container {
+main {
+    background-color: lightgray;
+    padding: 50px 0;
+
+}
+
+#square_container {
     width: 800px;
     height: 800px;
-    margin: 100px auto 0;
+    margin: auto;
     background-color: black;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
 }
 
-footer {
-    padding: 30px;
+.square {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 2px solid #fff;
 }
 
-.square {
-    width: calc(100% / 8);
-    height: calc(100% / 8);
-    border: 2px solid #fff;
+footer {
+    padding: 30px;
 }
