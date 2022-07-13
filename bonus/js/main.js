@@ -6,6 +6,8 @@ const buttonDom = document.getElementById('play_btn');
 
 // richiamare la difficoltà
 const difficultyDom = document.getElementById('difficulty');
+
+// settare variabili per numeri massimo e minimo relativi ad ogni difficoltà inserita
 let numMin = 1;
 let numMax;
 
@@ -50,6 +52,14 @@ function createSquare() {
         newSquare.classList.add('square');
         // metto ('appendo') newSquare dentro square_containerDom
         square_containerDom.append(newSquare);
+        // creare strutture condizionale per capire quale classe aggiungere ai quadrati
+        if (difficultyDom.value == 'easy') {
+            newSquare.classList.add('c_easy');
+        } else if (difficultyDom.value == 'medium') {
+            newSquare.classList.add('c_medium');
+        } else if (difficultyDom.value == 'hard') {
+            newSquare.classList.add('c_hard');
+        }
         // creare un event listener su ogni singola cella che cambi sfondo allo square e scriva in console il numero della cella
         newSquare.addEventListener('click', 
         function(){
@@ -68,6 +78,10 @@ function createSquare() {
 // funzione per generare un numero tra un minimo ed un massimo
 function getProgressiveNumbers(parameter1, parameter2) {
     for (let i = parameter1; i < parameter2+1; i++) {
+        // funzione per creare uno square ad ogni ciclo da 1 a 100
+        const newSquare = createSquare();
+        // stampo il numero su ogni quadrato
+        newSquare.append(i);
         console.log(i);
     }
 }
