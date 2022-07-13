@@ -28,7 +28,11 @@ header .h_right {
     align-items: center;
 }
 
-button {
+header select {
+    margin-left: 10px;
+}
+
+header button {
     padding: 10px;
     margin-left: 10px;
 }

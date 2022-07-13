@@ -6,22 +6,26 @@ const buttonDom = document.getElementById('play_btn');
 
 // richiamare la difficoltà
 const difficultyDom = document.getElementById('difficulty');
+let numMin = 1;
+let numMax;
 
 // struttura condizionale
 buttonDom.addEventListener('click',
 function() {
     if (difficultyDom.value == 'easy') {
         console.log('facile');
+        let numMax = 100;
+        const progressiveNumbers = getProgressiveNumbers(numMin, numMax);
     } else if (difficultyDom.value == 'medium') {
         console.log('media');
+        let numMax = 81;
+        const progressiveNumbers = getProgressiveNumbers(numMin, numMax);
     } else if (difficultyDom.value == 'hard') {
         console.log('difficile');
-
+        let numMax = 49;
+        const progressiveNumbers = getProgressiveNumbers(numMin, numMax);
     }
 })
-
-
-
 
 /*
 // aggiungere evento di attivazione del ciclo
@@ -36,6 +40,7 @@ function() {
     for ()easy
     for ()hard
 })
+*/
 
 // funzione per creare <div square>
 function createSquare() {
@@ -60,5 +65,9 @@ function createSquare() {
         return newSquare;
 }
 
-// funzione per generare un numero
-*/
+// funzione per generare un numero tra un minimo ed un massimo
+function getProgressiveNumbers(parameter1, parameter2) {
+    for (let i = parameter1; i < parameter2+1; i++) {
+        console.log(i);
+    }
+}
