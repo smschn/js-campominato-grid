@@ -23,5 +23,10 @@ function createSquare() {
         newSquare.classList.add('square');
         // metto ('appendo') newSquare dentro square_containerDom
         square_containerDom.append(newSquare);
+        // creare un event listener su ogni singola cella che cambi sfondo allo square e scriva in console il numero della cella
+        newSquare.addEventListener('click', 
+        function(){
+            this.style.backgroundColor = 'red';
+        })
         return newSquare;
 }
