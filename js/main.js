@@ -7,6 +7,10 @@ const buttonDom = document.getElementById('play_btn');
 // aggiungere evento di attivazione del ciclo
 buttonDom.addEventListener('click',
 function() {
+
+    // resettare il container ogni volta che clicco sul bottone play
+    square_containerDom.innerHTML = '';
+
     for (let i=1; i<101; i++) {
         // funzione per creare uno square ad ogni ciclo da 1 a 100
         const newSquare = createSquare();

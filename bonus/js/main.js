@@ -14,6 +14,10 @@ let numMax;
 // aggiungere evento al click
 buttonDom.addEventListener('click',
 function() {
+
+    // resettare il container ogni volta che clicco sul bottone play
+    square_containerDom.innerHTML = '';
+
     // creare struttura condizionale che crea un numero di quadrati legato al livello di difficoltà scelto
     if (difficultyDom.value == 'easy') {
         console.log('facile');
@@ -28,15 +32,6 @@ function() {
         let numMax = 49;
         const newProgressiveSquare = getProgressiveNumbers(numMin, numMax);
     }
-})
-
-// richiamare bottone reload
-const reloadDom = document.getElementById('reload_btn');
-
-// aggiungere evento al bottone reload
-reloadDom.addEventListener('click',
-function() {
-    window.location.reload();
 })
 
 // creare una funzione per generare <div square>
